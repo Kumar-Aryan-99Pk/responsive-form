@@ -28,8 +28,7 @@ body{
 }
 
 .bg img{
-    width: min(400px,100vw);
-    height: 100vh;
+    height: 100svh; /* safer viewport unit */
     display: block;
 }
 
@@ -144,10 +143,7 @@ input:-webkit-autofill {
 }
 @media (min-width: 700px){
 
-    .bg img{
-        width: 100vw;
-        height: 150vh;
-    }
+    
 }
 
 @media(min-width: 1024px){
