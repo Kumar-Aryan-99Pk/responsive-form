@@ -106,9 +106,17 @@ input[type=number] {
     align-items: center;
 }
 
-.submit-btn p{
+.submit-btn p,span{
     letter-spacing: 0;
     font-size: 0.6rem;
+}
+
+span{
+    margin-top: 20px;
+}
+a{
+    font-family: monospace;
+    text-decoration: none;
 }
 button{
     margin-top: 20px;
@@ -163,3 +171,4 @@ input:-webkit-autofill {
     }
 
 }
+
