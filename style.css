@@ -1,0 +1,169 @@
+:root{
+    --fontc:rgb(169, 78, 156);
+    --bgc:hsl(0, 0%, 9%);
+    --secondary_fontc:rgb(153, 99, 123);
+    --labelc: rgb(232, 86, 166);
+}
+
+@font-face {
+    font-family: 'Squid';
+    src: url(./squid.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--fontc);
+    font-family: 'squid';
+}
+
+body{
+    background-color: var(--bgc);
+}
+.container{
+    width: calc(100vw - 24px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.bg img{
+    width: min(400px,100vw);
+    height: 100vh;
+    display: block;
+}
+
+.main{
+    margin: 6px;
+    padding: 30px;
+    width: calc(100vw - 24px);
+    height: auto;
+    /* border: 1px solid yellow; */
+    box-shadow: 0px -100px 200px var(--bgc);
+    font-size: 1.8rem;
+}
+
+.title{
+    margin: 10px 0px 80px 10px;
+}
+
+.title h4{
+    /* color: antiquewhite; */
+    text-shadow: 1px 1px 4px rgb(83, 13, 68);
+}
+.title p,.submit-btn p{
+    font-size: 0.9rem;
+    color: var(--secondary_fontc);
+    padding: 10px 0px 0px 0px;
+    letter-spacing: 3px;
+}
+
+.allinput{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-auto-rows: auto;
+    gap: 20px;
+}
+.allinput label{
+    color: var(--labelc);
+    font-size: 0.9rem;
+}
+
+.sec{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input{
+    background-color: rgb(75, 75, 75);
+    border-radius: 10px;
+    border: 2px solid var(--fontc);
+    border-width: 0px 0px 2px 0px;
+    padding: 4px 0 4px 1em;
+    color: aliceblue;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 150ms ease-in-out;
+}
+
+input:focus{
+    outline: 0px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.submit-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn p{
+    letter-spacing: 0;
+    font-size: 0.6rem;
+}
+button{
+    margin-top: 20px;
+    padding: 10px;
+    background: linear-gradient(rgb(163, 14, 163),rgba(182, 113, 200, 0.5));
+    color: antiquewhite;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px var(--fontc);
+    transition: all 200ms ease-in-out;
+    border: 0px;
+}
+
+button:hover{
+    background: linear-gradient(rgb(205, 26, 205),rgba(220, 151, 237, 0.5));
+    
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #482d49 inset;
+  -webkit-text-fill-color: rgb(233, 233, 233);
+}
+
+.isntvalid{
+    background-color: rgb(85, 6, 6);
+}
+
+@media (min-width: 400px){
+    .container{
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (min-width: 700px){
+
+    .bg img{
+        width: 100vw;
+        height: 150vh;
+    }
+}
+
+@media(min-width: 1024px){
+    .container{
+        flex-direction: row;
+    }
+    .bg img{
+        width: min(400px,100vw);
+        height: 100vh;
+    }
+    .allinput{
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px;
+    }
+    button{
+        margin-top: 40px;
+    }
+
+}
